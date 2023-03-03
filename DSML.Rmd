@@ -1,0 +1,10 @@
+
+```{r}
+library("tidyverse")
+reservations = read_csv("Hotel Reservations.csv") 
+reservations = reservations %>% mutate(stringdate = paste(as.character(arrival_date),as.character(arrival_month), sep = ",")) %>% mutate(stringdate2 = paste(stringdate, as.character(arrival_year), sep = ",")) %>% mutate(dateobject=as.Date(stringdate2, format = "%d,%m,%Y")) %>% select(-c(stringdate, stringdate2))
+
+reservations = reservations %>% mutate(numerated = ifelse(booking_status == "Canceled", 1, 0)) %>% mutate(previous_booking_fixed = ifelse(repeated_guest == 0, 0.5, (no_of_previous_cancellations + no_of_previous_bookings_not_canceled)/2))
+
+
+```
