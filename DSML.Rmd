@@ -33,14 +33,22 @@ We can see that the Meal Plan 2 is the meal that can determine whether a custome
 Hence, I think that we should combine meal plan 1, 3, and not specified together and set make an entirely new category out of meal plan 2. The most effective remedy would be to make this column binary
 
 ```{r}
-reservations= reservations %>% mutate(mealplan_numerated  = ifelse("Meal Plan 2", 0, 1))
+reservations= reservations %>% mutate(mealplan_numerated  = ifelse(type_of_meal_plan == "Meal Plan 2", 0, 1))
+reservations
 ```
 
+
+```{r}
+meal_relation = glm(booking_status ~ mealplan_numerated, family = binomial, data = reservations)
+summary(meal_relation)
+```
+Meal plan doesnt really explain booking status so it shouldnt be in the final model. 
 
 ```{r}
 room_relation = glm(booking_status ~ factor(room_type_reserved), family = binomial, data = reservations)
 summary(room_relation)
 ```
+Firstly, we can see that the residual deviance model (the current model) is about the same as the null deviance model (the model with just the intercept). This implies that the room type reserved doesnt really explain much of the variation of whether a customer will cancel their booking or not. Maybe we shouuld convert this variable into a score.  
 Room type 1, 2, and 3 are statistically the same when it comes to determining booking status. Room_Type_4 to Room_Type 7's effect are significant, which means that we should likely convert these categorical variables to scores. 
 
 Room type 6 has the lowest effect, so it should have a score of 0. Hence, room 4 should have a score of 1; rooms 1, 2,3 should have scores of 2; room 5 should have a score of 3; and room 7 should have a score of 4. 
@@ -55,5 +63,25 @@ ifelse(room_type_reserved %in% c("Room_Type 4"), 1,                             
 room_relation.score = glm(booking_status ~ roomtype_numerated, family = binomial, data = reservations)
 summary(room_relation.score)
 ```
+Even after converting this to a score variable, it still does not explain the variation in the model. 
+
+```{r}
+cor(reservations %>% select(booking_status, roomtype_numerated))
+```
 
 
+```{r}
+transportation_type = glm(booking_status ~market_segment_type, family = binomial, data= reservations)
+summary(transportation_type)
+```
+
+The only significant variable is corporate, and that variable increases the probability of a reservation being canceled. 
+```{r}
+reservations = reservations %>% mutate(transportation_numerated = ifelse(market_segment_type == "Corporate", 0, 1))
+```
+
+```{r}
+transportation_model = glm(booking_status ~ transportation_numerated, family = binomial, data = reservations)
+summary(transportation_model)
+```
+So its the same as before. transportation doesnt really affect the booking status. 
