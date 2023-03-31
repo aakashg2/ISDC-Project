@@ -22,6 +22,11 @@ correlation = cor(reservations %>% select(no_of_adults, no_of_children, no_of_we
 corrplot(correlation, tl.srt = 40)
 ```
 
+```{r}
+
+
+```
+
 
 ```{r}
 meal_relation = glm(booking_status ~ factor(type_of_meal_plan), family = binomial, data = reservations)
@@ -84,4 +89,20 @@ reservations = reservations %>% mutate(transportation_numerated = ifelse(market_
 transportation_model = glm(booking_status ~ transportation_numerated, family = binomial, data = reservations)
 summary(transportation_model)
 ```
-So its the same as before. transportation doesnt really affect the booking status. 
+So its the same as before. transportation doesnt really affect the booking status.
+```{r}
+colnames(reservations)
+corrplot(cor(reservations %>% select(booking_status, roomtype_numerated, no_of_children, no_of_adults, no_of_weekend_nights, no_of_week_nights, lead_time, repeated_guest, no_of_previous_cancellations, no_of_previous_bookings_not_canceled, avg_price_per_room, no_of_special_requests, numerated, previous_booking_fixed, mealplan_numerated, roomtype_numerated, transportation_numerated)), tl.srt = 40)
+```
+
+```{r}
+reservations %>% select(room_type_reserved, booking_status) %>% group_by(room_type_reserved) %>% summarize(mean(booking_status))
+reservations %>% select(type_of_meal_plan, booking_status)%>% group_by(type_of_meal_plan) %>% summarize(mean(booking_status))
+reservations %>% select(arrival_month, booking_status) %>% group_by(arrival_month) %>% summarize(mean(booking_status))
+cor(reservations %>% select(arrival_month, avg_price_per_room))
+```
+
+How should 
+```{r}
+
+```
