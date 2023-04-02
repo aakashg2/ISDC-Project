@@ -53,6 +53,21 @@ cor(machine.learning.dataset)
 ```
 
 ```{r}
-write.csv(machine.learning.dataset, "C:/Users/aakas/Desktop/Team-A/MLDataset.csv", row.names = FALSE)
+#write.csv(machine.learning.dataset, "C:/Users/aakas/Desktop/Team-A/MLDataset.csv", row.names = FALSE)
 
 ```
+
+```{r}
+logistic.regression = glm(canceled ~ long_trip + lead_time + avg_price_per_room + special_requests_no + factor(month)+prev_show_rate, family = binomial, data = machine.learning.dataset)
+summary(logistic.regression)
+```
+
+```{r}
+1 - pchisq(45848, 36237)
+1 - pchisq(33202, 36221)
+
+```
+Very impressively, all of the variables we chose are all significant and contribute a lot of the model on whether a person cancels their booking or not. 
+Furthermore, based o the general goodness of fit test, we can also see that the model explains a large portion of the variance compared to an intercept only model, which implies that the predictors we have chosen are all good. 
+Of course, we proved this before in the previous cells above. This is merely more supporting evidence. 
+This is also our first machine learning model: The logistic regression model. 
