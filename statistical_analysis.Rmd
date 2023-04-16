@@ -66,6 +66,14 @@ boxplot(reservations$booking_status, reservations$lead_time)
 
 As we can see, lead time does play a significant role in determining the booking_status and hence should be kept in the model. 
 
+
+The day of the year very much does matter when a person books hotel. This is true because this dataset comes from hotel records from portugal, a country that is a prime example of a tourist heavy country. 
+However, due to the nature of the data we cannot run a correlation function on this. 
+
+```{r}
+library("tidyverse")
+seasons_vs_cancellations = reservations %>% select(canceled, month) %>% group_by(month)  %>% summarize(average_cancellations =sum(canceled)/n())
+barplot(seasons_vs_cancellations$average_cancellations, names.arg = seasons_vs_cancellations$month, xlab = "Month Number", ylab = "Probability of Cancellation")
 ```{r}
 
 ```
