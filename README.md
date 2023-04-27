@@ -63,6 +63,20 @@ month: The numbered month in which the hotel room was booked <br>
 
 prev_show_rate: if they had previous bookings, then its the percentage of time they have commited. If they do not have previous bookings, then it defaults to 0.5 <br>
 
+Data Dictionary for Hotel_Reservations_finalclean.txt
+
+adult_no: Number of Adults who are listed in the hotel reservation <br>
+child_no: Number of Children who are listed in the hotel reservation <br>
+weekend_nights_no: Number of Weekdays the hotel room was booked for <br>
+weekday_nights_no: Number of Weekends the hotel room was booked for <br>
+lead_time: How many days in advance the hotel room was booked <br>
+avg_price_per_room: The average price per room <br>
+special_requests_no: The number of special requests the individual made before making the booking (eg: prefering a room next with a beach view, wanting a room on a <br> specfic floor) <br>
+month: The month in which the hotel reservation was booked for <br>
+prev_show_rate: if they had previous bookings, then its the percentage of time they have commited. If they do not have previous bookings, then it defaults to 0.5 <br>
+
+
+
 Data Dictionary for Hotel Reservations.csv
 
 Booking_Id:unique identifier of each booking
@@ -108,4 +122,4 @@ booking_status: Flag indicating if the booking was canceled or not
 
 # Conclusion
 
-Through analysis, we have been able to create two models, a logistic and a random forest algorithm model. The logistic model prioritizes recall while the random forest algorithm has a slightly lower recall but far more accuracy. Clients that use our models can decide which best suits their companiy's needs and use them accordingly.
+Through analysis, we have been able to create two models, a logistic and a random forest algorithm model. The logistic model prioritizes recall while the random forest algorithm has a slightly lower recall but far more accuracy. Clients that use our models can decide which best suits their company's needs and use them accordingly.
