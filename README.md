@@ -8,7 +8,7 @@ Arnab Basu contributed to: Random Forest Optimize, ML Dataset, README<br>
 
 # Forecasting the Future of Hotel Bookings
 Project Vision: 
-Create a model which holds the ability to accurately predict wheter a hotel reservation made by a customer will eventually be cancelled or not.
+Create a model which holds the ability to accurately predict whether a hotel reservation made by a customer will eventually be cancelled or not.
 
 Motivation/Inspiration: 
 When hotel bookings are canceled, they create massive unexpected shrink for hotel chains. While this has been a persistent issue for some time now, the rate of cancellations has been recently increasing. This is due to mass booking sites like Booking.com and Trivago. This is a financial sink for the hotel chains, which pass on these costs to customers. Our project aims to create a better predictive model for cancellations, such that hotels and customers alike are able to benefit financially. 
