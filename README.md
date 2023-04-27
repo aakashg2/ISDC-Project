@@ -41,7 +41,15 @@ We performed the basic feature selection on {IDSC_project.ipynb} and used that t
 All of the data visualizations that were in the presentation were created in {Data Visualizations.ipynb} <br>
 The logarithmic model was created and tested in logarithmic {regression algorithim.rmd} <br>
 The random forest algorithm was created in {Random_Forest_Algorithm.ipynb} <br>
-We stored all of our data in csv files <br>
+Data Dictionary for MLDataset.csv <br>
+Filter by Cuisine and itll show a bar graph which indicates a bar graph which <br>
+long_trip: A boolean on whether or not the Sum of the number of weekday and weekend nights were greater than 2 <br>
+lead_time: How many days in advance a customer booked a hotel room <br>
+avg_price_per_room: The average price of the hotel room. It can be subject to change depending on the month and othr circumstances <br>
+month: The numbered month in which the hotel room was booked <br>
+prev_show_rate: if they had previous bookings, then its the percentage of time they have commited. If they do not have previous bookings, then it defaults to 0.5 <br>
+
+
 # Files
 
 
