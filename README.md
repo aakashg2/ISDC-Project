@@ -20,6 +20,13 @@ Estimates from Forbes show that hotels lose potentially an extra 30% in income f
 # Methodology
 
 PreProcessing/Cleaning: 
+Our initial dataset is in HotelReservations.csv with 18 columns. However, we deemed a portion of this data unusable, and we also converted some of our categorical variables to numerical variables and dummy variables. This brought our column total to 10, visible in hotel_reservations_cleaned.csv. We then converted the data for the Logistic Regression model to read in HotelReservations_finalclean.txt.
+
+It is important to note that the logistic regression model performed a descriptive analysis on the hotel_reservations_cleaned.csv to produce MLDataset.csv. However, as this produced negligible changes, we have decided to opt for the original.
+
+Finally, running a PCA and Feature Analysis, we find that the optimal amount of variables rests between 7 and 10.
+
+Optionally, we have created a RandomForestsOptimizer.ipynb to also under sample and tune hyperparameters. However, as this is very computationally taxing, we have left it to user discretion whether to utilize it.
 
 Research Questions:
 
