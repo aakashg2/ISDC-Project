@@ -33,14 +33,14 @@ Research Questions:
 # Data
 Our repository hosts all data used, both before and after preprocessing for each model. We store this data in the form of .csv and .txt files, which are explained in detail below.
 
-Our proposal which is labeled {TeamA's proposal.pdf} will give the goals and purpose of this project
-{Hotel Reservations.csv} is the raw dataset with the 18 predictors
-{MLDataset.csv} is the dataset that is used for the random forest model
-{Hotel_Reservations_finalclean.csv} is the dataset that is used to make the logarithmic model
-We performed the basic feature selection on {IDSC_project.ipynb} and used that to get a basic idea of what predictors were significant
-All of the data visualizations that were in the presentation were created in {Data Visualizations.ipynb}
-The logarithmic model was created and tested in logarithmic {regression algorithim.rmd}
-The random forest algorithm was created in {Random_Forest_Algorithm.ipynb}
+Our proposal which is labeled {TeamA's proposal.pdf} will give the goals and purpose of this project <br>
+{Hotel Reservations.csv} is the raw dataset with the 18 predictors <br>
+{MLDataset.csv} is the dataset that is used for the random forest model <br>
+{Hotel_Reservations_finalclean.csv} is the dataset that is used to make the logarithmic model <br>
+We performed the basic feature selection on {IDSC_project.ipynb} and used that to get a basic idea of what predictors were significant <br>
+All of the data visualizations that were in the presentation were created in {Data Visualizations.ipynb} <br>
+The logarithmic model was created and tested in logarithmic {regression algorithim.rmd} <br>
+The random forest algorithm was created in {Random_Forest_Algorithm.ipynb} <br>
 
 # Files
 
