@@ -41,7 +41,7 @@ We performed the basic feature selection on {IDSC_project.ipynb} and used that t
 All of the data visualizations that were in the presentation were created in {Data Visualizations.ipynb} <br>
 The logarithmic model was created and tested in logarithmic {regression algorithim.rmd} <br>
 The random forest algorithm was created in {Random_Forest_Algorithm.ipynb} <br>
-
+We stored all of our data in csv files <br>
 # Files
 
 
