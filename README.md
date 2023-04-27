@@ -41,13 +41,58 @@ We performed the basic feature selection on {IDSC_project.ipynb} and used that t
 All of the data visualizations that were in the presentation were created in {Data Visualizations.ipynb} <br>
 The logarithmic model was created and tested in logarithmic {regression algorithim.rmd} <br>
 The random forest algorithm was created in {Random_Forest_Algorithm.ipynb} <br>
+
 Data Dictionary for MLDataset.csv <br>
+
 Filter by Cuisine and itll show a bar graph which indicates a bar graph which <br>
+
 long_trip: A boolean on whether or not the Sum of the number of weekday and weekend nights were greater than 2 <br>
+
 lead_time: How many days in advance a customer booked a hotel room <br>
+
 avg_price_per_room: The average price of the hotel room. It can be subject to change depending on the month and othr circumstances <br>
+
 month: The numbered month in which the hotel room was booked <br>
+
 prev_show_rate: if they had previous bookings, then its the percentage of time they have commited. If they do not have previous bookings, then it defaults to 0.5 <br>
+
+Data Dictionary for Hotel Reservations.csv
+
+Booking_Id:unique identifier of each booking
+
+no_of_adults: Number of adults in booking
+
+no_of_children: Number of Children in booking
+
+no_of_weekend_nights: Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel
+
+no_of_week_nights: Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel
+
+type_of_meal_plan: Type of meal plan booked by the customer
+
+required_car_parking_space: Does the customer require a car parking space?
+
+room_type_reserved,lead_time: Type of room reserved by the customer.
+
+arrival_year: Year of arrival date
+
+arrival_month: Month of arrival date
+
+arrival_date: Date of the month that customer is expected to arrive
+
+market_segment_type: Market segment designation(Online/Offline)
+
+repeated_guest: Is the customer a repeated guest? (Have they booked before?)
+
+no_of_previous_cancellations: Number of previous bookings that were canceled by the customer prior to the current booking
+
+no_of_previous_bookings_not_canceled: Number of previous bookings not canceled by the customer prior to the current booking
+
+avg_price_per_room: Average price per day of the reservation; prices of the rooms are dynamic
+
+no_of_special_requests: Total number of special requests made by the customer
+
+booking_status: Flag indicating if the booking was canceled or not
 
 
 # Files
