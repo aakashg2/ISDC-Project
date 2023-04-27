@@ -31,7 +31,7 @@ Research Questions:
 
 
 # Data
-
+Our repository hosts all data used, both before and after preprocessing for each model. We store this data in the form of .csv and .txt files, which are explained in detail below.
 
 
 # Files
